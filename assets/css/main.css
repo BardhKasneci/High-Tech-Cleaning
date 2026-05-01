@@ -87,10 +87,19 @@ body {
     max-width: 600px;
 }
 
-h1 {
+.hero-title{
     font-size: 3.8rem;
-    margin: 1.5rem 0;
     line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.header-title{
+    font-size: 2.8rem;
+    width: 500px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffffff;
 }
 
 .highlight {
@@ -110,7 +119,7 @@ p {
 }
 
 .btn-primary {
-    background: rgb(2, 2, 91);
+    background: rgb(1, 1, 144);
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -202,13 +211,7 @@ p {
     margin-bottom: 15px;
 }
 
-h1 {
-    font-family: 'Oswald', sans-serif;
-    font-size: 44px;
-    line-height: 1.2;
-    text-transform: uppercase;
-    color: #ffffff;
-}
+
 
 .description-content p {
     color: #b2b2b2;
