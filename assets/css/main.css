@@ -1,6 +1,6 @@
 
 :root {
-    --bg-dark: #060b13;
+    --bg-dark: #00091a;
     --accent-blue: #00a8e8;
     --text-gray: #a0aab8;
     --card-bg: rgba(16, 24, 39, 0.8);
@@ -20,7 +20,7 @@ body {
 }
 
 .hero-container {
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     background: linear-gradient(rgba(6, 11, 19, 0.7), rgba(6, 11, 19, 0.7)), 
                 url('https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?auto=format&fit=crop&q=80&w=2000') center/cover no-repeat;
@@ -165,16 +165,104 @@ p {
 .border-green { border-bottom: 2px solid #4ade80; }
 .green-text { color: #4ade80; }
 
-.ecosystem-section {
-    margin-top: 20px;
-    background-color: #0a0a0a;
-    padding: 80px 10%;
-    color: white;
-    font-family: "DM Sans";
+.main-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    background-color: var(--bg-dark);
+    padding: 60px 30px 20px;
 }
 
-.section-header {
-    margin-bottom: 40px;
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 60px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.header-content {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 40px;
+}
+
+.description-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+.subtitle {
+    color: #022ada; 
+    font-size: 16px;
+    letter-spacing: 3px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 44px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.description-content p {
+    color: #b2b2b2;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.btn-about {
+    background-color: darkblue;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-weight: bold;
+    font-size: 16px;
+    display: inline-block;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.btn-about:hover {
+    background-color: rgb(0, 0, 117);
+}
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 40px;
+}
+
+.step-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.step-title span {
+    color: #3c1aff;
+}
+
+.step p {
+    font-size: 16px;
+    color: #999999;
+}
+
+.ecosystem-section {
+    margin-top: 20px;
+    background-color: var(--bg-dark);
+    padding: 80px 10%;
+    padding-top: 30px;
+    color: white;
+    font-family: "DM Sans";
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-header h2 {
@@ -417,11 +505,22 @@ h3 {
 }
 
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-  }
-  .footer-column h3 {
-    max-width: 100%;
-  }
+    .footer-container {
+        flex-direction: column;
+    }
+    .footer-column h3 {
+        max-width: 100%;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    
+    .top-row {
+        flex-direction: column;
+    }
+    
+    .header-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
 }
-
