@@ -30,7 +30,7 @@ body {
 
 .navbar {
     display: flex;
-    background-color: rgba(3, 3, 76, 0.593);
+    background-color: transparent;
     justify-content: space-between;
     align-items: center;
     padding: 2rem 5%;
@@ -249,6 +249,7 @@ p {
     min-height: 400px;
     justify-content: flex-end;
 }
+
 .detailing-card::before {
     content: "";
     position: absolute;
@@ -360,5 +361,67 @@ h3 {
     font-weight: bold;
     width: fit-content;
     cursor: pointer;
+}
+
+.site-footer {
+  background-color: #000000; 
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px; 
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff; 
+  max-width: 90%;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #cbcbcb; 
+  transform: translateX(8px);
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-column h3 {
+    max-width: 100%;
+  }
 }
 
