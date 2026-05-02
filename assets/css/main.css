@@ -258,6 +258,7 @@ p {
 
 .ecosystem-section {
     margin-top: 20px;
+    margin-bottom: 40px;
     background-color: var(--bg-dark);
     padding: 80px 10%;
     padding-top: 30px;
@@ -269,7 +270,7 @@ p {
 }
 
 .section-header h2 {
-    font-size: 2.6rem;
+    font-size: 3rem;
     margin-bottom: 10px;
 }
 
@@ -326,7 +327,13 @@ p {
     background-position: center;
     filter: blur(1px); 
     transform: scale(1.1); 
+    transition: transform 0.5s ease, filter 0.5s ease;
     z-index: 1; 
+}
+
+.main-card:hover::before {
+    filter: blur(2px); 
+    transform: scale(1.12); 
 }
 
 .card-content {
@@ -354,7 +361,13 @@ p {
     background-position: center;
     filter: blur(1px); 
     transform: scale(1.1); 
+    transition: transform 0.5s ease, filter 0.5s ease;
     z-index: 1; 
+}
+
+.detailing-card:hover::before {
+    filter: blur(2px); 
+    transform: scale(1.12); 
 }
 
 .icon-box {
@@ -441,23 +454,86 @@ h3 {
     font-weight: bold;
 }
 
-.green-text { color: #4ade80; }
-
 .btn-white {
     background: white;
     color: black;
     border: none;
     padding: 10px 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     font-weight: bold;
     width: fit-content;
     cursor: pointer;
 }
 
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 60vh; 
+  overflow: hidden;
+}
+
+.video-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: 200px;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  top: 50%;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+.content-title{
+    font-size: 3.4rem;
+}
+.content p{
+    width: 600px;
+    margin: auto;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.content button{
+    padding: 12px 46px;
+    font-size: 16px;
+    border-radius: 30px;
+    border: none;
+    transition: all 0.2 ease;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.content button:hover{
+    background-color: rgb(209, 209, 209);
+}
+
 .site-footer {
   background-color: #000000; 
   padding: 60px 20px;
-  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: "DM Sans";
   color: #ffffff;
 }
 
@@ -468,6 +544,8 @@ h3 {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 30px;
+  border-bottom: 1px solid white;
+
 }
 
 .footer-column {
@@ -482,6 +560,16 @@ h3 {
   padding-bottom: 10px;
   border-bottom: 1px solid #ffffff; 
   max-width: 90%;
+}
+
+.footer-column img{
+    width: 50px;
+}
+.footer-column p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    width: 250px;
+    color: white;
 }
 
 .footer-column ul {
@@ -507,6 +595,12 @@ h3 {
   transform: translateX(8px);
 }
 
+.copy{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;
