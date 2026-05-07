@@ -1,0 +1,175 @@
+
+:root {
+    --bg-dark: #00091a;
+    --accent-blue: #00a8e8;
+    --text-gray: #a0aab8;
+    --card-bg: rgba(16, 24, 39, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans";
+    background-color: var(--bg-dark);
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero-container {
+    height: 95vh;
+    width: 100%;
+    background: linear-gradient(rgba(6, 11, 19, 0.7), rgba(6, 11, 19, 0.7)), 
+                url('https://static.vecteezy.com/system/resources/previews/060/508/470/large_2x/a-car-being-washed-in-an-automated-car-wash-with-soap-and-water-spraying-everywhere-photo.jpeg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    max-height: 80px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--accent-blue);
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 1.0rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: white;
+    border-bottom: 2px solid var(--accent-blue);
+    padding-bottom: 5px;
+}
+
+.btn-join {
+    background: var(--accent-blue);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.text-section {
+    max-width: 600px;
+}
+
+.hero-title{
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.header-title{
+    font-size: 2.8rem;
+    width: 500px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.highlight {
+    color: var(--accent-blue);
+}
+
+p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary {
+    background: rgb(1, 1, 144);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.0rem;
+    font-weight: 700;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-secondary {
+    background: rgba(255,255,255,0.05);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.0rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.stats-container {
+    position: absolute;
+    bottom: 50px;
+    right: 8%;
+    display: flex;
+    gap: 20px;
+}
+
+.stat-card {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;
+    width: 200px;
+    display: flex;
+    gap: 15px;
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(10px);
+}
+
+.stat-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.label { font-size: 0.75rem; font-weight: 600; margin-bottom: 4px; }
+.value { font-size: 1.4rem; font-weight: 700; }
+.subtext { font-size: 0.7rem; color: var(--text-gray); }
+
+.border-green { border-bottom: 2px solid #4ade80; }
+.green-text { color: #4ade80; }
