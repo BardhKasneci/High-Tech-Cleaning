@@ -24,26 +24,26 @@ body {
 }
 
 .hero-container {
-  height: 80vh;
-  width: 100%;
-  position: relative;
-  overflow: hidden;  
-  display: flex;
-  flex-direction: column;
+    height: 90vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;  
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-container::before {
-  content: "";
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%; 
-  height: 100%;
-  background: linear-gradient(rgba(6, 11, 19, 0.85), rgba(6, 11, 19, 0.85)),
-              url('../images/Screenshot 2026-05-08 121826.png') center/cover no-repeat;
-  filter: blur(5px);
-  transform: scale(1.1); 
-  z-index: -1; 
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background: linear-gradient(rgba(6, 11, 19, 0.85), rgba(6, 11, 19, 0.85)),
+                url('../images/Screenshot 2026-05-08 121826.png') center/cover no-repeat;
+    filter: blur(5px);
+    transform: scale(1.1); 
+    z-index: -1; 
 }
 
 .navbar {
@@ -119,7 +119,7 @@ body {
     color: var(--highlight);
 }
 
-p {
+.hero-p {
     color: white;
     line-height: 1.6;
     font-size: 1.2rem;
@@ -152,19 +152,162 @@ p {
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--highlight); 
+    transform: translateY(-5px);
+    border-color: var(--highlight); 
 }
 
 .stat-card h3 {
-  font-size: 2.5rem;
-  color: var(--highlight);
-  margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: var(--highlight);
+    margin-bottom: 10px;
 }
 
 .stat-card p {
-  color: #a0a0a0;
-  font-size: 0.9rem;
+    color: #a0a0a0;
+    font-size: 0.9rem;
+}
+.about-section {
+    padding: 80px 10%;
 }
 
+.info-container {
+    max-width: 1300px;
+    margin: 60px auto;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 100px;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.image-wrapper img {
+    height: 400px;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    filter: brightness(70%);
+}
+
+.text-content { 
+    max-width: 500px;
+}
+
+.info-title {
+    font-size: 3.0rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1.1;
+    color: white;
+    font-family: var(--header-font);
+}
+
+.info-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.bottom-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+    gap: 40px;
+    justify-content: center;
+}
+
+.step-title {
+    font-family: var(--header-font);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.step-title span {
+    font-family: var(--header-font);
+    font-size: 22px;
+    padding-right: 3px;
+    color: var(--highlight);
+}
+
+.step-p {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 1.1rem;
+    margin-bottom: 2.5rem;
+}
+
+.site-footer {
+    background-color: #000000; 
+    padding: 60px 20px;
+    font-family: "DM Sans";
+    color: #ffffff;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    border-bottom: 1px solid white;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 180px; 
+}
+
+.footer-column h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ffffff; 
+    max-width: 90%;
+}
+
+.footer-column img{
+    width: 60px;
+}
+.footer-column p {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    width: 250px;
+    color: white;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 0.95rem;
+    display: inline-block;
+    transition: all 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #cbcbcb; 
+    transform: translateX(8px);
+}
+
+.copy{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}
 
