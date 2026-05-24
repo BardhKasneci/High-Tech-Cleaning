@@ -18,6 +18,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 90px;
 }
 
 body {
@@ -70,6 +71,48 @@ body {
     color: white;
     border-bottom: 2px solid var(--highlight);
     padding-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    display: none;           
+    position: absolute;
+    top: 100%;                 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: transparent; 
+    min-width: 160px;
+    list-style: none;
+    padding: 20px 10px;
+    z-index: 100;   
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: var(--text-gray);
+    text-align: center;
+    padding: 6px 10px;
+    display: block;
+    font-size: 0.95rem;
+    transition: 0.3s
+}
+
+.dropdown-menu li a:hover {
+    color: white;
+    border-bottom: 2px solid --highlight;       
+    padding-bottom: 10px;      
 }
 
 .hero-content {
@@ -306,7 +349,7 @@ p {
 
 .explore-btn {
     display: inline-block;
-    background-color: blue; 
+    background-color: var(--button-bg); 
     color: #ffffff;
     text-decoration: none;
     padding: 12px 0;
