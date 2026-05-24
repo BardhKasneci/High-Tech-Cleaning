@@ -16,17 +16,24 @@
 <body>
 
     <nav class="navbar">
-            <div class="logo"><img src="assets/images/logo.png" width="60px"></div>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>                
-                <li><a href="#how-it-works">How It Works</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Locations</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>                
-            </ul>
-           
-        </nav>
+        <div class="logo"><img src="assets/images/logo.png" width="60px"></div>
+        <ul class="nav-links">
+            <li class="dropdown">
+                <a href="index.html">Home <span class="arrow">&#9662;</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="index.html#how-it-works">How it Works</a></li>
+                    <li><a href="index.html#services">Our Services</a></li>
+                    <li><a href="index.html#card2">Technology</a></li>
+                    <li><a href="index.html#card3">Accessories</a></li>
+                    <li><a href="index.html#card4">Washing Agents</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About Us</a></li>                
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Locations</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>                
+        </ul>
+    </nav>
 
     <header class="header">
         <p class="contact-label">CONTACT US</p>
