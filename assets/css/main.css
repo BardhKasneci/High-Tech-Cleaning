@@ -163,6 +163,7 @@ body {
 }
 
 .btn-primary {
+    text-decoration: none;
     background: var(--button-bg);
     color: white;
     border: none;
@@ -175,9 +176,15 @@ body {
     display: flex;
     align-items: center;
     gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover{
+    background: var(--button-hover);
 }
 
 .btn-secondary {
+    text-decoration: none;
     background: rgba(255,255,255,0.05);
     color: white;
     font-family: var(--header-font);
@@ -188,6 +195,11 @@ body {
     font-size: 1.2rem;
     cursor: pointer;
     backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover{
+    background: rgba(255,255,255,0.02);
 }
 
 .stats-container {
@@ -269,9 +281,10 @@ body {
     background-color: var(--button-bg);
     color: white;
     text-decoration: none;
-    padding: 15px 35px;
+    padding: 15px 32px 15px 35px;
+    font-family: var(--header-font);
     font-weight: bold;
-    font-size: 16px;
+    font-size: 1.2rem;
     display: inline-block;
     border-radius: 8px;
     transition: background 0.3s ease;
