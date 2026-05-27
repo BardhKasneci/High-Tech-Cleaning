@@ -907,6 +907,10 @@ body {
     cursor: pointer;
     font-size: 1.6rem;
 }
+.social-links a{
+    text-decoration: none;
+    color: white;
+}
 
 .footer-column p {
     margin-top: 10px;

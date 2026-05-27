@@ -208,85 +208,109 @@ body {
     color: #a0a0a0;
     font-size: 0.9rem;
 }
-.about-section {
-    padding: 80px 10%;
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 40px 0px 40px;
 }
 
-.info-container {
-    margin: 60px auto;
-}
-
-.about-grid {
+.info-section {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     gap: 60px;
-    padding-bottom: 60px;
-    border-bottom: 1px solid white ;
+    margin-bottom: 100px;
 }
 
-.about-item{
-    display: flex;
-    align-items: center;
-    gap: 50px;
+.section-content {
+    flex: 1;
 }
 
-.image-wrapper img {
-    height: 400px;
-    width: 100%;
-    display: block;
-    object-fit: cover;
-    filter: brightness(70%);
-}
-
-.text-content { 
+.text-block {
     max-width: 500px;
 }
 
-.info-title {
-    font-size: 3.0rem;
+.accent-line {
+    width: 100px;
+    height: 4px;
+    background-color: var(--highlight);
+    margin-bottom: 16px;
+}
+
+.text-block h2 {
+    font-size: 3rem;
     font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-    letter-spacing: 1.1;
     color: white;
     font-family: var(--header-font);
+    letter-spacing: -1px;
+    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
-.info-description {
-    font-size: 1.1rem;
-    line-height: 1.6;
+.text-block p {
+    font-size: 1.2rem;
     color: var(--text-gray);
-    margin-bottom: 20px;
+    font-weight: 400;
+    line-height: 1.7rem;
+    margin-bottom: 30px;
+    text-align: justify;
 }
 
-.bottom-row {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
-    gap: 40px;
-    justify-content: center;
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 16px;
 }
 
-.step-title {
-    font-family: var(--header-font);
-    font-size: 22px;
+.image-wrapper img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+    transform: scale(1.02);
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
     margin-bottom: 15px;
+    letter-spacing: 0.5px;
 }
 
-.step-title span {
-    font-family: var(--header-font);
-    font-size: 22px;
-    padding-right: 3px;
+.checkmark {
     color: var(--highlight);
-}
-
-.step-p {
-    color: var(--text-gray);
-    line-height: 1.6;
+    font-weight: 900;
+    margin-right: 15px;
     font-size: 1.1rem;
-    margin-bottom: 2.5rem;
 }
 
+@media (max-width: 768px) {
+    .info-section, .info-section.reverse {
+        flex-direction: column;
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    
+    .text-block {
+        max-width: 100%;
+    }
+    
+    .text-block h2 {
+        font-size: 2rem;
+    }
+}
 .site-footer {
     background-color: #000000; 
     padding: 60px 20px;
