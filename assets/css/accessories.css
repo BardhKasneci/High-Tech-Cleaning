@@ -1,0 +1,412 @@
+:root {
+  --body-bg: #070C18;
+  --highlight: #499bff;
+  --button-bg: #115cfe;
+  --button-hover: #0047e1;
+  --text-gray: #a0aab8;
+  --text-white: #ffffff;
+  --header-font: "Barlow Condensed", sans-serif;
+  --body-font: "DM Sans", sans-serif;
+  --card-bg: rgba(16, 24, 39, 0.8);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body-font);
+  background-color: var(--body-bg);
+  color: var(--text-gray);
+  line-height: 1.5;
+}
+
+.hero-container {
+    height: 92vh;
+    width: 100%;
+    background: linear-gradient(rgba(6, 11, 19, 0.7), rgba(6, 11, 19, 0.7)), 
+                url('https://images.pexels.com/photos/33093191/pexels-photo-33093191.jpeg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    background-color: transparent;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5%;
+    max-height: 80px;
+}
+
+.logo {
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--highlight);
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-gray);
+    font-size: 1.0rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-links a.active, .nav-links a:hover {
+    color: white;
+    border-bottom: 2px solid var(--highlight);
+    padding-bottom: 5px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.arrow {
+    font-size: 0.8rem;
+    margin-left: 4px;
+    vertical-align: middle;
+}
+
+.dropdown-menu {
+    display: none;           
+    position: absolute;
+    top: 100%;                 
+    left: 50%;
+    transform: translateX(-50%); 
+    background-color: transparent; 
+    min-width: 160px;
+    list-style: none;
+    padding: 20px 10px;
+    z-index: 100;   
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li a {
+    color: var(--text-gray);
+    text-align: center;
+    padding: 6px 10px;
+    display: block;
+    font-size: 0.95rem;
+    transition: 0.3s
+}
+
+.dropdown-menu li a:hover {
+    color: white;
+    border-bottom: 2px solid --highlight;       
+    padding-bottom: 10px;      
+}
+
+.hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 8%;
+    position: relative;
+}
+
+.text-section {
+    max-width: 600px;
+}
+
+.hero-title{
+    font-size: 70px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-family: var(--header-font) ;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.header-title{
+    font-size: 3.8rem;
+    width: 500px;
+    line-height: 1.2;
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.highlight {
+    color: var(--highlight);
+}
+
+.hero-text {
+    color: var(--text-gray);
+    line-height: 1.6;
+    font-size: 1.2rem;
+    margin-bottom: 2.0rem;
+}
+
+.cta-group {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-primary {
+    text-decoration: none;
+    background: var(--button-bg);
+    color: white;
+    border: none;
+    font-family: var(--header-font);
+    font-weight: 600;
+    padding: 1rem 2.8rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.2s ease;
+}
+
+.btn-primary:hover{
+    background: var(--button-hover);
+}
+
+.btn-secondary {
+    text-decoration: none;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-family: var(--header-font);
+    font-weight: 600;
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover{
+    background: rgba(255,255,255,0.02);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.section {
+  padding: 60px 0;
+}
+
+.section-subtitle {
+  font-family: var(--header-font);
+  font-size: 1.8rem;
+  color: var(--highlight);
+  margin-bottom: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.section-title {
+  font-family: var(--header-font);
+  font-size: 2.6rem;
+  color: var(--text-white);
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 0.5px;
+}
+
+.section-description {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 1050px;
+  margin-bottom: 40px;
+}
+
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+  height: 380px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 30px;
+  color: var(--text-white);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 24, 39, 0.9);
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+.card:hover::before {
+  background: rgba(16, 24, 39, 0.65);
+}
+
+.card-content {
+  position: relative;
+  z-index: 2;
+  max-width: 80%;
+}
+
+.card-title {
+  font-family: var(--header-font);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+}
+
+.card-desc {
+  font-size: 1.03rem;
+  color: var(--text-gray);
+  margin-bottom: 25px;
+  min-height: 40px;
+}
+
+.service-btn {
+  display: inline-block;
+  background-color: var(--button-bg);
+  color: var(--text-white);
+  text-decoration: none;
+  padding: 12px 60px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: none;
+  transition: background-color 0.2s;
+  box-shadow: 0 4px 12px rgba(17, 92, 254, 0.3);
+}
+
+.service-btn:hover {
+  background-color: var(--button-hover);
+}
+
+.single-card-wrapper {
+  max-width: 50%;
+}
+
+.bg-mali { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/mali-model.jpg'); }
+.bg-net { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTt2e56Xk1h5InwKOkfF23lGdgz_ysZ68wOlCLMqWHTpQ&s=10'); }
+.bg-quado { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/quado-model.jpg'); }
+.bg-multique { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiqlUbJO25TrBe2ZEzcdT0L1vtJe6Ttvd6SH6b5H1xHQ&s=10'); }
+.bg-moneychanger { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/mjenjac-novca-.jpg'); }
+.bg-helmet { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/sferica-pit-stop-car-wash-rijeka-3.jpg'); }
+.bg-hose { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3Qo5OAPfHnukSVt5MQ-07kuM4Fe-I0B3VkQbiUqyKEQ&s=10'); }
+.bg-lance { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/drzac-za-pistolj-i-posuda-za-cetke-u-praonici-1024x558.jpg'); }
+.bg-swivel { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/okretne-ruke-za-autopraonicu.jpg'); }
+
+.site-footer {
+  background-color: #000000; 
+  padding: 60px 20px;
+  font-family: "DM Sans";
+  color: #ffffff;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  border-bottom: 1px solid white;
+
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 180px; 
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ffffff; 
+  max-width: 90%;
+}
+
+.footer-column img{
+    width: 60px;
+}
+.social-links{
+    display: flex;
+    gap: 10px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.social-links i{
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+.social-links a{
+    text-decoration: none;
+    color: white;
+}
+
+.footer-column p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    width: 250px;
+    color: white;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 0.95rem;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #cbcbcb; 
+  transform: translateX(8px);
+}
+
+.copy{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+}

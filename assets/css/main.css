@@ -295,12 +295,11 @@ body {
 }
 
 .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
     padding: 40px;
-    background-color: var(--body-bg); 
-    max-width: 1250px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -315,20 +314,37 @@ body {
 
 .service-card {
     position: relative;
-    height: 450px;
+    height: 380px;
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
     display: flex;
-    align-items: center;
-    margin-bottom: -10px;
+    flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    color: var(--text-white);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
-.card-1 { background-image: url('../images/car-wash.jpg'); }
-.card-2 { background-image: url('../images/carwash-technology.png'); }
-.card-3 { background-image: url('../images/accessory-image.jpg'); }
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--card-bg);
+    z-index: 1;
+    transition: background 0.3s;
+}
+
+.service-card:hover::before {
+    background: rgba(16, 24, 39, 0.65);
+}
+.card-1 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhmZsmnqzu8r2UBbAFFogAeFmFVaRVHL7WKA43935n6g&s=10'); }
+.card-2 { background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWdJSWzWsW1NQH3uXnZEolNrLp-eva2tn5jBI5Xrbk-Q&s=10'); }
+.card-3 { background-image: url('https://adriateh.com/wp-content/uploads/2022/05/Carwash-Prague-czech-adriatech-14-1024x683.jpg'); }
 .card-4 { background-image: url('../images/washing-agents.jpg'); }
 
 .card-overlay {
@@ -337,53 +353,46 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); 
+    background: rgba(0, 0, 0, 0.32); 
     z-index: 1;
 }
 
 .card-content {
     position: relative;
     z-index: 2;
-    text-align: center;
-    color: #ffffff;
-    padding: 0 40px;
-    max-width: 550px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 90%;
 }
 
 .card-content h2 {
     font-family: var(--header-font);
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
     letter-spacing: 0.5px;
 }
 
 .card-content p {
-    font-family: var(--body-font);
-    font-size: 1.08rem;
-    line-height: 1.6;
-    font-weight: 500;
-    margin-bottom: 30px;
-    color: #e0e0e0;
+    font-size: 1.02rem;
+    color: var(--text-gray);
+    margin-bottom: 25px;
+    min-height: 40px;
 }
 
 .explore-btn {
     display: inline-block;
-    background-color: var(--button-bg); 
-    color: #ffffff;
+    background-color: var(--button-bg);
+    color: var(--text-white);
     text-decoration: none;
-    padding: 12px 0;
-    width: 260px;
-    font-size: 1.05rem;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    padding: 12px 60px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: none;
+    transition: background-color 0.2s;
+    box-shadow: 0 4px 12px rgba(17, 92, 254, 0.3);
 }
 
 .explore-btn:hover {
-    background-color: rgb(0, 0, 180);
+    background-color: var(--button-hover);
 }
 
 .how-it-works {
@@ -560,23 +569,28 @@ body {
     width: 600px;
     font-size: 1.2rem;
     margin: auto;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-.content button{
+.content a{
     padding: 12px 46px;
     font-size: 16px;
     border-radius: 30px;
+    text-decoration: none;
+    color: black;
     border: none;
+    background-color: white;
     text-transform: uppercase;
     font-family: var(--header-font);
     transition: all 0.2 ease;
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.content button:hover{
-    background-color: rgb(209, 209, 209);
+.content a:hover{
+    background-color: rgb(0, 0, 0);
+    color: white;
 }
 
 .t-section {
